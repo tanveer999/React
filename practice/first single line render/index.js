@@ -1,4 +1,8 @@
-ReactDOM.render(<h1 className="header">Hello, everyone!</h1>, document.getElementById("root"))
+// ReactDOM.render(<h1 className="header">Hello, everyone!</h1>, document.getElementById("root"))
+
+// Below line throws as JSX supports only one parent element
+// ReactDOM.render(<h1 className="header">Hello, everyone!</h1><p></p>, document.getElementById("root"))
+
 // below render replaces the first render if uncommented
 // ReactDOM.render(
 //     <ul>
@@ -9,9 +13,7 @@ ReactDOM.render(<h1 className="header">Hello, everyone!</h1>, document.getElemen
 // )
 
 // vanilla javascript
-
 // document.body.onload = addElement;
-
 // function addElement() {
 //     // create a new h1 element
 //     const newHeading = document.createElement("h1")
@@ -25,3 +27,17 @@ ReactDOM.render(<h1 className="header">Hello, everyone!</h1>, document.getElemen
 //     const element = document.getElementById("root")
 //     element.appendChild(newHeading)
 // } 
+
+// using variable
+
+// const page = (
+//     <div>
+//         <h1>This is a heading</h1>
+//         <p>This is a paragraph</p>
+//     </div>
+// )
+
+// console.log(page)
+
+// ReactDOM.render(page, document.getElementById("root"))
+
