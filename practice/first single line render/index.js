@@ -41,3 +41,35 @@
 
 // ReactDOM.render(page, document.getElementById("root"))
 
+
+// const navbar = (
+//     <nav>
+//         <h1>Website</h1>
+//         <ul>
+//             <li>
+//                 Pricing
+//             </li>
+//             <li>
+//                 About
+//             </li>
+//             <li>
+//                 Contact
+//             </li>
+//         </ul>
+//     </nav>
+// )
+// ReactDOM.render(navbar, document.querySelector("#root"))
+
+const page = (
+    <div>
+        <h1>Heading</h1>
+        <p>Learning React</p>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ol>
+    </div>
+)
+
+// document.getElementById("root").append(page) //output: [object Object]
+ReactDOM.render(page, document.getElementById("root"))
