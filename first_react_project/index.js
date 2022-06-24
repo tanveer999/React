@@ -1,14 +1,23 @@
 function Page() {
     return (
         <div>
-            <h1>React</h1>
-            <ul>
-                <li>React is based on Javascript</li>
-                <li>React is composable</li>
-                <li>React is declarative</li>
-            </ul>
+            <header>
+                <nav>
+                    <img src="react_logo.png" width="40px"></img>
+                </nav>
+            </header>
+            <h1>Why React?</h1>
+            <ol>
+                <li>It's a popular library.</li>
+                <li>It's composable</li>
+                <li>It's declarative</li>
+            </ol>
+
+            <footer>
+                <small>"&copy; 2022 Ahmed development. All rights reserved."</small>
+            </footer>
         </div>
     )
 }
 
-ReactDOM.render(<Page/>, document.getElementById("root"))
+ReactDOM.render(<Page />, document.getElementById("root"))
