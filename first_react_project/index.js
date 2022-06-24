@@ -2,8 +2,13 @@
 function Header() {
     return (
         <header>
-            <nav>
-                <img src="react_logo.png" width="40px"></img>
+            <nav className="flex-nav">
+                <img src="react_logo.png" className="nav-logo"></img>
+                <ul className="nav-items">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
             </nav>
         </header>
     )
@@ -12,8 +17,8 @@ function Header() {
 // Footer component
 function Footer() {
     return (
-        <footer>
-            <small>&copy; 2022 Ahmed development. All rights reserved.</small>
+        <footer className="footer">
+            &copy; 2022 Ahmed development. All rights reserved.
         </footer>
     )
 }
