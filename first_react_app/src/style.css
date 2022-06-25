@@ -1,31 +1,67 @@
-.flex-nav {
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    font-family: Inter, sans-serif;
+    background-color: #282D35
+}
+
+/* Navbar component */
+nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 10px 10px 10px lightgray;
-    padding: 3%;
+    background-color: #21222A;
+    /* padding top bottom 30px and left right 25px */
+    padding: 30px 25px; 
+    height: 90px;
 }
 
-.nav-logo {
-    
-    width: 65px;
+.nav--logo_text, .nav--title {
+    margin: 0;
 }
 
-.nav-items {
-    list-style: none;
-    display: flex;
-    
+.nav--icon {
+    height: 40px;
+    margin-right: 7px;
 }
 
-.nav-items > li {
+.nav--logo_text {
+    color: #61DAFB;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.nav--title {
+    color: #DEEBF8;
+    font-weight: 600;
+}
+
+/* Main Component */
+.div--main {
+    margin-top: 60px;
+    padding-left: 25px;
+    width: 550px;
+    height: 460px;
+}
+
+.div--h1--main {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.div-ul-main {
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.div-ul-main-li {
     padding: 10px;
 }
 
-.footer {
-    position: fixed;
-    bottom:0;
-    left:0;
-    background: lightgrey;
-    width: 100%;
-    padding:5%;
+.div-ul-main-li::marker {
+    color: #61DAFB;
+    font-size: 1.4rem;
 }
