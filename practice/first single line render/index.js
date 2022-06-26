@@ -60,16 +60,27 @@
 // )
 // ReactDOM.render(navbar, document.querySelector("#root"))
 
-const page = (
-    <div>
-        <h1>Heading</h1>
-        <p>Learning React</p>
-        <ol>
-            <li>Item 1</li>
-            <li>Item 2</li>
-        </ol>
-    </div>
-)
+// const page = (
+//     <div>
+//         <h1>Heading</h1>
+//         <p>Learning React</p>
+//         <ol>
+//             <li>Item 1</li>
+//             <li>Item 2</li>
+//         </ol>
+//     </div>
+// )
 
 // document.getElementById("root").append(page) //output: [object Object]
-ReactDOM.render(page, document.getElementById("root"))
+// ReactDOM.render(page, document.getElementById("root"))
+
+function Name() {
+    const firstName = "Tanveer"
+    const lastName = "Ahmed"
+    // any javascript code can be written in {}
+    return (
+        <h1>hello {firstName} {lastName} {1 + 3}!</h1>
+    )
+}
+
+ReactDOM.render(<Name/>, document.getElementById("root"))

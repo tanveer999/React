@@ -1,6 +1,6 @@
 import katie_zaferes from "../images/katie_zaferes.jpg"
 import star_icon from "../images/star.png"
-function Card() {
+function Card(props) {
     return (
         <div className="card">
             <img src={katie_zaferes} alt="katie_zaferes" className="card--image"></img>
