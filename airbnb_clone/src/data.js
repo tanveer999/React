@@ -1,6 +1,5 @@
 
 import swimming_pic from "./images/swimming.jpg"
-import wedding_pic from "./images/wedding.jpg"
 import mountain_bike from "./images/mountain_bike.jpg"
 
 const Data = [
@@ -22,7 +21,7 @@ const Data = [
         title: "Learn Wedding Photography",
         description: "Interested in becoming a wedding photographer? For beginner and experienced photographers alike, join us in learning techniques required to leave the happy couple with memories that'll last a lifetime.",
         price: 125,
-        coverImg: [wedding_pic],
+        coverImg: [swimming_pic],
         stats: {
             rating: 5.0,
             reviewCount: 30
@@ -32,6 +31,32 @@ const Data = [
     },
     {
         id: 3,
+        title: "Group Mountain Biking",
+        description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+        price: 50,
+        coverImg: [mountain_bike],
+        stats: {
+            rating: 4.8,
+            reviewCount: 2
+        },
+        location: "Norway",
+        openSpots: 3,
+    },
+    {
+        id: 4,
+        title: "Group Mountain Biking",
+        description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+        price: 50,
+        coverImg: [mountain_bike],
+        stats: {
+            rating: 4.8,
+            reviewCount: 2
+        },
+        location: "Norway",
+        openSpots: 3,
+    },
+    {
+        id: 5,
         title: "Group Mountain Biking",
         description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
         price: 50,
