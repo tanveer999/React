@@ -1,7 +1,15 @@
 import star_icon from "../images/star.png"
 function Card(props) {
+    let badgeText
+    if(props.openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if(props.country === "Online") {
+        badgeText = "ONLINE"
+    }
+
     return (
         <div className="card">
+            {badgeText && <div className="card--badge">{badgeText}</div>}
             <img src={props.img} alt="katie_zaferes" className="card--image"></img>
             <div className="card--stats">
                 <img src={star_icon} alt="star icon" className="card--star"></img>
