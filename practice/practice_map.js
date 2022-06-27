@@ -19,3 +19,4 @@ const pTaggedPokemon = pokemon.map((item) => {
     return `<p>${item}</p>`
 })
 console.log(pTaggedPokemon)
+

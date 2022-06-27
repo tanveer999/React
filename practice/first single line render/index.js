@@ -85,14 +85,43 @@
 
 // ReactDOM.render(<Name/>, document.getElementById("root"))
 
+// function App() {
+//     function handleClick() {
+//         console.log("button clicked")
+//     }
+//     return (
+//         <div>
+//             <h1>on click event</h1>
+//             <button onClick={handleClick} onMouseOver={handleClick}>Click me</button>
+//         </div>
+//     )
+// }
+
+
+// use state
 function App() {
+    const thingsArray = ["Thing 1", "Thing 2"]
+    
+    function addItem() {
+        const newThing = `Thing ${thingsArray.length + 1}`
+        thingsArray.push(newThing)
+        console.log(thingsArray)
+    }
+    
+    const mappedArray = thingsArray.map(item => <p key={item}>{item}</p>)
+    console.log(mappedArray)
+
+    const [result, setResult] = React.useState("No")
+
     function handleClick() {
-        console.log("button clicked")
+        setResult("Yes")
     }
     return (
         <div>
-            <h1>on click event</h1>
-            <button onClick={handleClick} onMouseOver={handleClick}>Click me</button>
+            <button onClick={handleClick}>{result}</button>
+            <button onClick={addItem}>Add Item</button>
+            {mappedArray}
+            
         </div>
     )
 }
