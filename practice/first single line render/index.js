@@ -74,13 +74,27 @@
 // document.getElementById("root").append(page) //output: [object Object]
 // ReactDOM.render(page, document.getElementById("root"))
 
-function Name() {
-    const firstName = "Tanveer"
-    const lastName = "Ahmed"
-    // any javascript code can be written in {}
+// function Name() {
+//     const firstName = "Tanveer"
+//     const lastName = "Ahmed"
+//     // any javascript code can be written in {}
+//     return (
+//         <h1>hello {firstName} {lastName} {1 + 3}!</h1>
+//     )
+// }
+
+// ReactDOM.render(<Name/>, document.getElementById("root"))
+
+function App() {
+    function handleClick() {
+        console.log("button clicked")
+    }
     return (
-        <h1>hello {firstName} {lastName} {1 + 3}!</h1>
+        <div>
+            <h1>on click event</h1>
+            <button onClick={handleClick} onMouseOver={handleClick}>Click me</button>
+        </div>
     )
 }
 
-ReactDOM.render(<Name/>, document.getElementById("root"))
+ReactDOM.render(<App />, document.getElementById("root"))
