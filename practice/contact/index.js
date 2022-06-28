@@ -1,18 +1,28 @@
+function Star(props) {
+    let image = props.isFilled ? "star_filled.png" : "star.png"
+
+    return (
+        <img 
+            src={`${image}`} 
+            className="card--favorite"
+            onClick={props.handleClick}
+        />
+    )
+}
+
 function App() {
     const [contact, setContact] = React.useState({
         firstName: "John",
         lastName: "Doe",
         phone: "+1 (719) 555-1212",
         email: "itsmyrealname@example.com",
-        isFavorite: false
-    })
+        isFavorite: false    })
     /**
      * Challenge: Fill in the values in the markup
      * using the properties of our state object above
      * (Ignore `isFavorite` for now)
      */
     //
-    let image = contact.isFavorite ? "star_filled.png" : "star.png"
     function toggleFavorite() {
         setContact(prevContact => {
             console.log(prevContact)
@@ -29,11 +39,7 @@ function App() {
             <article className="card">
                 {/* <img src="./images/user.png" className="card--image" /> */}
                 <div className="card--info">
-                    <img 
-                        src={`${image}`} 
-                        className="card--favorite"
-                        onClick={toggleFavorite}
-                    />
+                    <Star isFilled={contact.isFavorite} handleClick={toggleFavorite}/>
                     <h2 className="card--name">
                         {`${contact.firstName} ${contact.lastName}`}
                     </h2>
