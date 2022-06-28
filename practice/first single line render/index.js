@@ -111,14 +111,16 @@ function App() {
     const mappedArray = thingsArray.map(item => <p key={item}>{item}</p>)
     console.log(mappedArray)
 
-    const [result, setResult] = React.useState("No")
-
+    // const [result, setResult] = React.useState("No")
+    const [isGoingOut, setIsGoingOut] = React.useState(true)
     function handleClick() {
-        setResult("Yes")
+        setIsGoingOut(prev => {
+            return !prev
+        })
     }
     return (
         <div>
-            <button onClick={handleClick}>{result}</button>
+            <button onClick={handleClick}>{isGoingOut? "Yes" : "No"}</button>
             <button onClick={addItem}>Add Item</button>
             {mappedArray}
             
