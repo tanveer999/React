@@ -6,9 +6,9 @@ function App(props) {
   // console.log(boxes)
    
   const [squares, setSquares] = useState(boxes)
-
+  console.log("App component")
   const squareElements = squares.map(square => (
-    <Box on={square.on} id={square.id}/>
+    <Box on={square.on} key={square.id}/>
   ))
   return (
     <main>

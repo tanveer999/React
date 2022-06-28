@@ -1,9 +1,21 @@
+import {useState} from "react"
 function Box(props) {
-    const style = {
-        backgroundColor: props.on ? "black" : ""
+
+    // using props to create state is called as derived state
+    const [colorOn, setColorOn] = useState(props.on)
+
+    function toggleColor() {
+        setColorOn(prevColorOn => {
+           return !prevColorOn
+        }) 
     }
+
+    const style = {
+        backgroundColor: colorOn? "black" : "transparent"
+    }
+    console.log("Box component")
     return (
-        <div style={style} className="box" key={props.id}></div>
+        <div style={style} className="box" onClick={toggleColor}></div>
     )
 }
 
