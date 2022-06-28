@@ -100,16 +100,25 @@
 
 // use state
 function App() {
-    const thingsArray = ["Thing 1", "Thing 2"]
-    
+    // const thingsArray = ["Thing 1", "Thing 2"]
+
+    const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"])
+
     function addItem() {
-        const newThing = `Thing ${thingsArray.length + 1}`
-        thingsArray.push(newThing)
-        console.log(thingsArray)
+        // const newThing = `Thing ${thingsArray.length + 1}`
+        // thingsArray.push(newThing)
+        // console.log(thingsArray)
+
+        setThingsArray(prevThingsArray => {
+            return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
+        })
     }
     
     const mappedArray = thingsArray.map(item => <p key={item}>{item}</p>)
     console.log(mappedArray)
+
+
+
 
     // const [result, setResult] = React.useState("No")
     const [isGoingOut, setIsGoingOut] = React.useState(true)
