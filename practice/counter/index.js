@@ -1,3 +1,9 @@
+function Count(props) {
+    return (
+        <h1>{props.number}</h1> 
+    )
+}
+
 function App() {
 
     const [count, setCount] = React.useState(0)
@@ -33,10 +39,11 @@ function App() {
     return (
         <div>
             <button onClick={decreaseCount}>-</button>
-            <h1>{count}</h1>
+            <Count number={count} />
             <button onClick={increaseCount}>+</button>
         </div>
     )
 }
+
 
 ReactDOM.render(<App />, document.getElementById("root"))
