@@ -5,7 +5,7 @@ function App() {
 
   const [formData, setFormData] = useState(
     {
-      firstName: "", lastName: ""
+      firstName: "", lastName: "", comments: ""
     }
   )
   console.log(formData)
@@ -32,6 +32,7 @@ function App() {
         name="firstName"
         value={formData.firstName}
       />
+      <br></br>
       <input
         type="text"
         placeholder="Last Name"
@@ -39,6 +40,11 @@ function App() {
         name="lastName"
         value={formData.lastName}
       />
+      <br></br>
+      <textarea name="comments" 
+      placeholder="comments"
+      onChange={handleChange} 
+      value={formData.comments} />
     </form>
   );
 }
