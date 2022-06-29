@@ -15,7 +15,7 @@ function Box(props) {
     }
     console.log("Box component")
     return (
-        <div style={style} className="box" onClick={toggleColor}></div>
+        <div style={style} className="box" onClick={() => props.toggle(props.id)}></div>
     )
 }
 
