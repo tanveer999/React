@@ -30,12 +30,14 @@ function App() {
         placeholder="First Name"
         onChange={handleChange}
         name="firstName"
+        value={formData.firstName}
       />
       <input
         type="text"
         placeholder="Last Name"
         onChange={handleChange}
         name="lastName"
+        value={formData.lastName}
       />
     </form>
   );
