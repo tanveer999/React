@@ -1,17 +1,19 @@
-function Joke(props) {
-    console.log(props.isPun)
-    console.log(props.comments)
-    return (
-        <div className="div--joke">
-            <div className="div--setup">
-                <h3>{props.setup && "Setup:"}</h3>
-                <p>{props.setup}</p>
-            </div>
+import { useState } from "react"
 
-            <div className="div--punchline">
-                <h3>punchline:</h3>
-                <p>{props.punchline}</p>
-            </div>
+function Joke(props) {
+
+    const [isShown, setIsShown] = useState(false)
+
+    function toggleShown() {
+        setIsShown(prevIsShown => !isShown)
+    }
+    console.log(isShown)
+    return (
+        <div className="joke--item">
+            {props.setup && <h3>{props.setup}</h3>}
+            {isShown && <p>{props.punchline}</p>}
+            <button onClick={toggleShown}>{isShown ? "Hide puncline" : "Show punchline"}</button>
+            <hr />
         </div>
     )
 }
