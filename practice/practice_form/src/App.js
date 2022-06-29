@@ -3,33 +3,39 @@ import {useState} from "react"
 
 function App() {
 
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
+  const [formData, setFormData] = useState(
+    {
+      firstName: "", lastName: ""
+    }
+  )
+  console.log(formData)
   // event is passed by the browser and it has lot of information
   // target returns dom element which triggered the event
   function handleChange(event) {
     // console.log(event.target.value)
 
-    setFirstName(prevFirstName => event.target.value)
+    setFormData(prevFormData => {
+      //[event.target.name] when returning dynamic values enclose with []
+      return {
+        ...prevFormData,
+        [event.target.name]: event.target.value
+      }
+    })
   }
 
-  function handleLastName(event) {
-    setLastName(prev => event.target.value)
-  }
-
-
-  console.log(lastName)
   return (
     <form>
       <input
         type="text"
         placeholder="First Name"
         onChange={handleChange}
+        name="firstName"
       />
       <input
         type="text"
         placeholder="Last Name"
-        onChange={handleLastName}
+        onChange={handleChange}
+        name="lastName"
       />
     </form>
   );
