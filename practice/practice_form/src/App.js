@@ -9,10 +9,11 @@ function App() {
       lastName: "", 
       comments: "",
       isFriendly: true,
-      employment: ""
+      employment: "",
+      favColor: ""
     }
   )
-  console.log(formData)
+  // console.log(formData)
   // event is passed by the browser and it has lot of information
   // target returns dom element which triggered the event
   function handleChange(event) {
@@ -28,8 +29,14 @@ function App() {
     })
   }
 
+  function handleSubmit(event) {
+    event.preventDefault() // dosen't refresh the page data will be present after clicking submit
+    // if preventDefault() is commented page will refresh and inputs will be cleared and data will be passed in url querystring
+    console.log(formData)
+}
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="First Name"
@@ -99,6 +106,29 @@ function App() {
                 <br />
                 
             </fieldset>
+
+            <br />
+            
+            <label htmlFor="favColor">What is your favorite color?</label>
+            <br />
+            <select 
+                id="favColor"
+                value={formData.favColor}
+                onChange={handleChange}
+                name="favColor"
+            >
+                <option value="">-- Choose --</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="indigo">Indigo</option>
+                <option value="violet">Violet</option>
+            </select>
+            <br />
+            <br />
+            <button>Submit</button>
     </form>
   );
 }
