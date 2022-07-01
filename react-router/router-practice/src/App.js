@@ -1,11 +1,16 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
+import Home from "./components/Home"
+import About from "./components/About"
+import Products from "./components/Products"
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div>home page basic</div>} />
-        <Route path="/testing" element={<h1>test</h1>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
     </BrowserRouter>
   )
