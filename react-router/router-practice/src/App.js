@@ -1,9 +1,9 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
-import Home from "./components/Home"
-import About from "./components/About"
-import Products from "./components/Products"
-import Error from "./components/Error"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Products from "./pages/Products"
+import Error from "./pages/Error"
 
 function App() {
   return (
