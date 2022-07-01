@@ -5,6 +5,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<div>home page basic</div>} />
+        <Route path="/testing" element={<h1>test</h1>} />
       </Routes>
     </BrowserRouter>
   )
